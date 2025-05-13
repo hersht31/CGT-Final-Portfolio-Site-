@@ -189,46 +189,38 @@ function openModal(element) {
   } else if (title.includes('Fake Out')) {
   summary = `
     <h2>\"Fake Out\"</h2>
-    <p><strong>Summary:</strong> This project aimed to redesign a fitness tracking application to prevent users from cheating step-based systems and instead encourage sustainable behavior change. By understanding the user mindset and analyzing how current systems are gamed, our team created an app prototype focused on promoting integrity, engagement, and real outcomes.</p>
+    <p><strong>Summary:</strong> This project reimagines the fitness tracking experience to address the problem of users cheating to reach arbitrary step goals. The redesigned app emphasizes authenticity, adaptive support, and social motivation to create a healthier relationship between users and their activity trackers.</p>
 
-    <p><strong>Design Pillars:</strong></p>
+    <p><strong>Final Design Pillars:</strong></p>
     <ul>
-      <li><strong>Community:</strong> Encouraging social connection through shared goals and team support.</li>
-      <li><strong>Authenticity:</strong> Detecting fraudulent activity using accelerometer and GPS validation.</li>
-      <li><strong>Incremental Support:</strong> Encouraging small, consistent habits with flexible challenge types.</li>
+      <li><strong>Community:</strong> Small peer groups, shared goals, encouragement badges, and a supportive leaderboard based on consistency and effort.</li>
+      <li><strong>Authenticity:</strong> AI-based step validation, visual activity logs (green/yellow/red), and integrity scores that reward honest effort.</li>
+      <li><strong>Incremental Support:</strong> Micro-goals, personalized tips, streak tracking, and adaptive motivation messages.</li>
     </ul>
 
-    <p><strong>Methods Used:</strong></p>
+    <p><strong>App Features:</strong></p>
     <ul>
-      <li>Stakeholder interviews with fitness app users and behavioral analysis.</li>
-      <li>Persona development and user journey mapping.</li>
-      <li>Low-fidelity and mid-fidelity prototyping in Figma.</li>
-      <li>Usability testing and iterative refinement based on feedback.</li>
+      <li>Daily challenge hub, community feed, transparent leaderboard with hearts instead of rankings.</li>
+      <li>Real-time authenticity tracking with alerts and explanations.</li>
+      <li>Flexible activity goals beyond steps, such as mindfulness or movement streaks.</li>
     </ul>
 
-    <p><strong>Features:</strong></p>
+    <p><strong>User Feedback:</strong></p>
     <ul>
-      <li>“Pod” challenges where users complete real-world tasks together.</li>
-      <li>Step validation via real-time motion sensing and trajectory analysis.</li>
-      <li>Flexible metrics—users could track not just steps, but standing hours, hydration, or walks with pets.</li>
+      <li>Praised the reduced pressure from rigid metrics.</li>
+      <li>Valued verified tracking and trust in the system.</li>
+      <li>Felt motivated by community features and real effort recognition.</li>
+      <li>Suggested improvements to personalize encouragement and clarify scoring logic.</li>
     </ul>
 
-    <p><strong>Key Findings:</strong></p>
+    <p><strong>My Contributions:</strong></p>
     <ul>
-      <li>Users were motivated more by shared accountability than leaderboard rankings.</li>
-      <li>Gamification alone can lead to superficial engagement without meaningful health impact.</li>
-    </ul>
-
-    <p><strong>Personal Contributions:</strong></p>
-    <ul>
-      <li>Led user interviews and research synthesis on cheating behavior in fitness tracking.</li>
-      <li>Created initial design sketches and contributed heavily to final prototype flow in Figma.</li>
-      <li>Developed the AI-powered step validation concept and app interaction architecture.</li>
+      <li>Helped define project problem and scope using research insights.</li>
+      <li>Created user journey maps and conducted interviews.</li>
+      <li>Led Figma prototyping of core app features including the Integrity Score and Challenge Hub.</li>
+      <li>Contributed to writing and synthesis of user feedback into next-step priorities.</li>
     </ul>
   `;
-}
-
-  content.innerHTML = summary;
   modal.style.display = 'block';
 }
 
