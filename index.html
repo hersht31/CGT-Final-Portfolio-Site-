@@ -113,9 +113,7 @@
     <li><strong>Guardian Starship:</strong> Safety bot with facial recognition.</li>
     <li><strong>Drone Delivery:</strong> Rapid response and terrain-agnostic drops.</li>
   </ul>
-  <img src="/mnt/data/Screenshot 2025-05-12 at 7.43.08 PM.png" alt="Tour Guide Starship Sketch">
-  <img src="/mnt/data/Screenshot 2025-05-12 at 7.43.16 PM.png" alt="Guardian Starship Sketch">
-  <img src="/mnt/data/Screenshot 2025-05-12 at 7.43.21 PM.png" alt="Drone Delivery Concept">
+  
   <a href="#project1" class="button">Learn More</a>
 </section>
 
@@ -171,11 +169,17 @@
 
       let summary = '';
       if (id === 'project1') {
-        summary = '<h2>Starship Research</h2><p>This full project explored user frustrations with Starship robots and proposed solutions like Tour Guide and Guardian Starships, plus drone delivery.</p>';
+        summary = '<h2>Starship Research</h2>' +
+                  '<p>This full project explored user frustrations with Starship robots and proposed solutions like Tour Guide and Guardian Starships, plus drone delivery.</p>' +
+                  '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.08 PM.png" alt="Tour Guide Starship Sketch">' +
+                  '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.16 PM.png" alt="Guardian Starship Sketch">' +
+                  '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.21 PM.png" alt="Drone Delivery Concept">';
       } else if (id === 'project2') {
-        summary = '<h2>Embodied Shopping</h2><p>This concept introduced AR and Smart Cart systems for in-store experiences including AR navigation, inventory lookup, and checkout support.</p>';
+        summary = '<h2>Embodied Shopping</h2>' +
+                  '<p>This concept introduced AR and Smart Cart systems for in-store experiences including AR navigation, inventory lookup, and checkout support.</p>';
       } else if (id === 'project3') {
-        summary = '<h2>Exercise "Fake Out"</h2><p>We tackled cheating in fitness tracking by designing AI validation, community pods, and challenge-based rewards to encourage honest engagement.</p>';
+        summary = '<h2>Exercise "Fake Out"</h2>' +
+                  '<p>We tackled cheating in fitness tracking by designing AI validation, community pods, and challenge-based rewards to encourage honest engagement.</p>';
       }
 
       content.innerHTML = summary;
