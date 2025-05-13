@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hersh Thakkar's Portfolio</title>
     <style>
-        /* Reset */
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        /* Fonts & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           background-color: #f7f9fc;
@@ -20,7 +13,6 @@
           line-height: 1.6;
           padding: 20px;
         }
-
         header {
           background: #0E3386;
           color: white;
@@ -28,12 +20,7 @@
           text-align: center;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        header h1 {
-          font-size: 2.5rem;
-        }
-
-        /* Navigation */
+        header h1 { font-size: 2.5rem; }
         nav {
           background: #89CFF0;
           display: flex;
@@ -42,7 +29,6 @@
           padding: 10px 0;
           flex-wrap: wrap;
         }
-
         nav a {
           color: white;
           text-decoration: none;
@@ -51,60 +37,43 @@
           border-radius: 6px;
           transition: background 0.3s;
         }
-
-        nav a:hover {
-          background: #0E3386;
-          color: white;
-        }
-
-        /* Sections */
-        section {
-          max-width: 900px;
-          background: white;
+        nav a:hover { background: #0E3386; color: white; }
+        .project-card {
+          max-width: 1200px;
           margin: 40px auto;
           padding: 30px;
+          background: white;
           border-radius: 12px;
           box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s, box-shadow 0.2s;
         }
-
-        section h2 {
-          font-size: 1.8rem;
-          margin-bottom: 20px;
-          color: #0E3386;
+        .project-card:hover { transform: scale(1.02); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+        .project-card h2 { font-size: 2rem; color: #0E3386; margin-bottom: 20px; }
+        .project-card p { font-size: 1.1rem; margin-bottom: 20px; }
+        .project-card a.button {
+          display: inline-block;
+          background-color: #0E3386;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background 0.3s;
         }
-
-        section h3 {
-          font-size: 1.2rem;
-          margin-top: 20px;
-          color: #89CFF0;
-        }
-
-        section p, section ul {
-          margin-bottom: 15px;
-        }
-
-        /* Footer */
+        .project-card a.button:hover { background-color: #89CFF0; }
         footer {
           text-align: center;
-          padding: 20px 0;
+          padding: 40px 20px 20px;
           color: #888;
+          font-size: 0.95rem;
         }
-
-        /* Responsive tweaks */
+        footer p {
+          margin-bottom: 6px;
+        }
         @media (max-width: 768px) {
-          nav {
-            flex-direction: column;
-            align-items: center;
-          }
-
-          header h1 {
-            font-size: 2rem;
-          }
-
-          section {
-            margin: 20px 10px;
-            padding: 20px;
-          }
+          nav { flex-direction: column; align-items: center; }
+          header h1 { font-size: 2rem; }
+          .project-card { margin: 20px 10px; padding: 20px; }
         }
     </style>
 </head>
@@ -114,68 +83,42 @@
     </header>
     <nav>
         <a href="#about">About Me</a>
-        <a href="#exercise1">Exercise 1</a>
-        <a href="#project1">Project 1 - Starship Research</a>
-        <a href="#project2">Project 2 - Embodied Shopping</a>
-        <a href="#project3">Project 3 - Fake Out</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
     <main>
-        <section id="about">
+        <section id="about" class="project-card">
             <h2>About Me</h2>
             <p>My name is Hersh Thakkar, and I am a computer science student at Purdue University with a passion for creating innovative software solutions. I specialize in frontend design, database management, and mobile application development, blending technical skills with creative problem-solving to build impactful digital experiences. This portfolio showcases my work on projects for CGT 17208, ranging from research on the Starship robotic systems to a fitness mobile application, reflecting my commitment to user-centered design and technology-driven innovation.</p>
         </section>
-
-        <section id="exercise1">
-            <h2>Exercise 1 - User Experience in Software Development</h2>
-            <p>This exercise focused on understanding the critical role of User Experience (UX) in software development. Key takeaways included:
-            <ul>
-                <li><strong>Core Focus:</strong> Designing intuitive, accessible, and engaging software products to create positive user outcomes.</li>
-                <li><strong>Key Skills:</strong> Frontend technologies (HTML, CSS, JavaScript, React), prototyping tools (Figma, Sketch), and usability testing frameworks.</li>
-                <li><strong>Technical Skills:</strong> User research, data analysis, and iterative design methodologies.</li>
-                <li><strong>Soft Skills:</strong> Empathy, collaboration, and effective communication for building user-centered designs.</li>
-                <li><strong>Why UX Matters:</strong> Enhances user satisfaction, reduces learning curves, and drives business success by aligning technology with real-world needs.</li>
-            </ul>
-            </p>
+        <section id="projects">
+            <div class="project-card">
+                <h2>Project 1 - Starship Research</h2>
+                <p>This project explored the challenges and opportunities in campus delivery systems using Starship robots. My contributions included user research, design proposals, and technical insights to enhance delivery efficiency and safety.</p>
+                <a href="starship-research.html" class="button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2>Project 2 - Embodied Shopping</h2>
+                <p>This project aimed to redefine the in-store shopping experience using augmented reality (AR). I worked on journey mapping, design ideation, and prototyping for a personalized shopping assistant.</p>
+                <a href="embodied-shopping.html" class="button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2>Project 3 - Fake Out</h2>
+                <p>This project tackled the issue of 'exercise fake outs' in fitness tracking. My contributions included identifying core challenges, designing community features, and developing AI-powered authenticity verification systems.</p>
+                <a href="exercise-fake-out.html" class="button">View Project</a>
+            </div>
         </section>
-
-        <section id="project1">
-            <h2>Project 1 - Starship Research</h2>
-            <p>This project explored the challenges and opportunities in campus delivery systems using Starship robots. My contributions included:
-            <ul>
-                <li><strong>User Research:</strong> Conducted interviews and documented user frustrations with delivery speed, app reliability, and order accuracy.</li>
-                <li><strong>Design Proposals:</strong> Developed innovative solutions like 'Tour Guide Starships' for campus navigation and 'Guardian Starships' with facial recognition for safety.</li>
-                <li><strong>Technical Insights:</strong> Highlighted the need for improved routing algorithms and real-time communication to reduce delivery times.</li>
-                <li><strong>Impact:</strong> Presented a vision for smarter, safer, and more efficient robot delivery networks, potentially transforming campus logistics.</li>
-            </ul>
-            </p>
-        </section>
-
-        <section id="project2">
-            <h2>Project 2 - Embodied Shopping</h2>
-            <p>This project aimed to redefine the in-store shopping experience using augmented reality (AR). My work included:
-            <ul>
-                <li><strong>Concept Ideation:</strong> Developed the Smart Cart Companion, an early concept for personalized, tech-enhanced shopping carts.</li>
-                <li><strong>Journey Mapping:</strong> Created user journey maps to identify pain points and optimize customer experience in physical retail environments.</li>
-                <li><strong>Design Prototyping:</strong> Contributed to the Figma design of the virtual shopping assistant interface, including real-time stock tracking and product recommendations.</li>
-                <li><strong>Reflections:</strong> Gained insights into the challenges of blending digital and physical shopping experiences.</li>
-            </ul>
-            </p>
-        </section>
-
-        <section id="project3">
-            <h2>Project 3 - Fake Out</h2>
-            <p>This project is meant to tackle the issue of 'exercise fake outs' in fitness tracking. I plan to contribute to:
-            <ul>
-                <li><strong>Problem Identification:</strong> Identify key issues with step-based metrics and their impact on user motivation.</li>
-                <li><strong>Community Features:</strong> Design peer support and accountability systems to foster real engagement.</li>
-                <li><strong>Authenticity Verification:</strong> Develop AI-powered systems to detect and discourage cheating in fitness metrics.</li>
-                <li><strong>Long-Term Strategy:</strong> Focus on sustainable fitness habits, promoting real-world health outcomes.</li>
-            </ul>
-            </p>
+        <section id="contact" class="project-card">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out to me:</p>
+            <p><strong>Email:</strong> hershthakkar@example.com</p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/hershthakkar" target="_blank">linkedin.com/in/hershthakkar</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/hershthakkar" target="_blank">github.com/hershthakkar</a></p>
         </section>
     </main>
     <footer>
-        &copy; 2025 Hersh Thakkar
+        <p>&copy; 2025 Hersh Thakkar</p>
+        <p>Designed with care and way too many last-minute changes 🫠</p>
     </footer>
 </body>
 </html>
