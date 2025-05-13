@@ -118,22 +118,22 @@
 <section id="projects" class="project-card">
   <h2>UIX Design Experience:</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center;">
+    <div class="project-tile" style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center; cursor: pointer;" onclick="openModal(this)">
       <img src="https://via.placeholder.com/300x180.png?text=Exercise+1" alt="Exercise 1" style="border-radius: 8px; width: 100%;">
       <h3>🗂️ Exercise 1</h3>
       <p>User Experience Applied to My Career Path</p>
     </div>
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center;">
+    <div class="project-tile" style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center; cursor: pointer;" onclick="openModal(this)">
       <img src="https://via.placeholder.com/300x180.png?text=Starship+Research" alt="Starship Research" style="border-radius: 8px; width: 100%;">
       <h3>🚚 What Can Starships Do</h3>
       <p>Exploring and Improving Campus Delivery</p>
     </div>
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center;">
+    <div class="project-tile" style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center; cursor: pointer;" onclick="openModal(this)">
       <img src="https://via.placeholder.com/300x180.png?text=Embodied+Shopping" alt="Embodied Shopping" style="border-radius: 8px; width: 100%;">
       <h3>🛒 Embodied Shopping</h3>
       <p>How Physical Stores Could Become Digital Experiences</p>
     </div>
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center;">
+    <div class="project-tile" style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 15px; text-align: center; cursor: pointer;" onclick="openModal(this)">
       <img src="https://via.placeholder.com/300x180.png?text=Fake+Out" alt="Fake Out" style="border-radius: 8px; width: 100%;">
       <h3>⌚ "Fake Out"</h3>
       <p>Redesigning Fitness Tracking to Discourage Cheating</p>
@@ -160,6 +160,34 @@
 </div>
 
 <script>
+function openModal(element) {
+  const modal = document.getElementById('projectModal');
+  const content = document.getElementById('modalContent');
+  const title = element.querySelector('h3').innerText.trim();
+
+  let summary = '';
+  if (title.includes('Exercise 1')) {
+    summary = '<h2>Exercise 1</h2>' +
+              '<p>This exercise focused on understanding the role of UX in software development. Key insights included front-end and prototyping tools, empathy in design, and aligning features with user needs.</p>';
+  } else if (title.includes('Starship')) {
+    summary = '<h2>Starship Research</h2>' +
+              '<p>We explored Starship robot inefficiencies and proposed enhancements like a campus tour bot, security guard bot, and aerial drone delivery concept.</p>' +
+              '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.08 PM.png" alt="Tour Guide Starship Sketch">' +
+              '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.16 PM.png" alt="Guardian Starship Sketch">' +
+              '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.21 PM.png" alt="Drone Delivery Concept">';
+  } else if (title.includes('Embodied')) {
+    summary = '<h2>Embodied Shopping</h2>' +
+              '<p>We designed an AR-powered Smart Cart that guides users through physical stores with digital recommendations, stock updates, and checkout assistance.</p>';
+  } else if (title.includes('Fake Out')) {
+    summary = '<h2>"Fake Out"</h2>' +
+              '<p>Our fitness app concept discourages cheating by validating movement with AI and GPS, and adds community support pods to promote real accountability.</p>';
+  }
+
+  content.innerHTML = summary;
+  modal.style.display = 'block';
+}
+
+
   document.querySelectorAll('.button').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
