@@ -163,8 +163,32 @@ function openModal(element) {
 
   let summary = '';
   if (title.includes('Exercise 1')) {
-    summary = '<h2>Exercise 1</h2>' +
-              '<p>This exercise focused on understanding the role of UX in software development. Key insights included front-end and prototyping tools, empathy in design, and aligning features with user needs.</p>';
+    summary = `
+    <h2>Exercise 1 – User Experience in Software Development</h2>
+    <p><strong>Overview:</strong> This exercise focused on understanding the foundational importance of User Experience (UX) in software development. The goal was to explore how thoughtful interaction design can create positive outcomes for users while aligning technical solutions with real-world needs.</p>
+
+    <p><strong>Why UX Matters:</strong></p>
+    <ul>
+      <li>Ensures applications are intuitive, accessible, and engaging.</li>
+      <li>Improves user satisfaction and reduces learning curves.</li>
+      <li>Increases product adoption and reduces errors.</li>
+      <li>Drives business success by aligning features with user needs.</li>
+      <li>Reduces development costs by identifying issues early.</li>
+    </ul>
+
+    <p><strong>Key Skills in UX:</strong></p>
+    <ul>
+      <li><strong>Frontend Technologies:</strong> HTML, CSS, JavaScript, React</li>
+      <li><strong>Prototyping Tools:</strong> Figma, Sketch</li>
+      <li><strong>Usability Testing:</strong> Frameworks to validate design decisions</li>
+      <li><strong>Technical:</strong> User research, data analysis, iterative design, agile methodologies</li>
+      <li><strong>Process & Soft Skills:</strong> Empathy, collaboration, and communication</li>
+    </ul>
+
+    <p><strong>Current Trends:</strong> The field of UX continues to evolve with an emphasis on cross-functional collaboration, accessibility, and the integration of user feedback into every phase of product development.</p>
+
+    <p><strong>Reflection:</strong> This exercise helped me frame UX not just as a design philosophy, but as an essential engineering process. The skills and perspectives gained here continue to shape how I approach software challenges in future projects.</p>
+  `;
   } else if (title.includes('Starship')) {
     summary = `<h2>What Can Starships Do?</h2>
     <p><strong>Summary:</strong> Our team conducted extensive user testing and research on the current state of Starship robot delivery at Purdue. Users consistently reported negative experiences: long delivery times, inconsistent service, UI issues, and app reliability problems. We then proposed three innovative enhancements to transform the system’s perception and practical utility.</p>
