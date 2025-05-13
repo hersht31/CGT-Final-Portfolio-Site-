@@ -178,52 +178,43 @@ function openModal(element) {
     summary = '<h2>Exercise 1</h2>' +
               '<p>This exercise focused on understanding the role of UX in software development. Key insights included front-end and prototyping tools, empathy in design, and aligning features with user needs.</p>';
   } else if (title.includes('Starship')) {
-    summary = '<h2>Starship Research</h2>' +
-              '<p>We explored Starship robot inefficiencies and proposed enhancements like a campus tour bot, security guard bot, and aerial drone delivery concept.</p>' +
-              '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.08 PM.png" alt="Tour Guide Starship Sketch">' +
-              '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.16 PM.png" alt="Guardian Starship Sketch">' +
-              '<img src="/mnt/data/Screenshot 2025-05-12 at 7.43.21 PM.png" alt="Drone Delivery Concept">';
-  } else if (title.includes('Embodied')) {
-    summary = '<h2>Embodied Shopping</h2>' +
-              '<p>We designed an AR-powered Smart Cart that guides users through physical stores with digital recommendations, stock updates, and checkout assistance.</p>';
-  } else if (title.includes('Fake Out')) {
   summary = `
-    <h2>\"Fake Out\"</h2>
-    <p><strong>Summary:</strong> This project reimagines the fitness tracking experience to address the problem of users cheating to reach arbitrary step goals. The redesigned app emphasizes authenticity, adaptive support, and social motivation to create a healthier relationship between users and their activity trackers.</p>
+    <h2>What Can Starships Do?</h2>
+    <p><strong>Summary:</strong> Our team conducted extensive user testing and research on the current state of Starship robot delivery at Purdue. Users consistently reported negative experiences: long delivery times, inconsistent service, UI issues, and app reliability problems. We then proposed three innovative enhancements to transform the system’s perception and practical utility.</p>
 
-    <p><strong>Final Design Pillars:</strong></p>
+    <p><strong>Identified Problems:</strong></p>
     <ul>
-      <li><strong>Community:</strong> Small peer groups, shared goals, encouragement badges, and a supportive leaderboard based on consistency and effort.</li>
-      <li><strong>Authenticity:</strong> AI-based step validation, visual activity logs (green/yellow/red), and integrity scores that reward honest effort.</li>
-      <li><strong>Incremental Support:</strong> Micro-goals, personalized tips, streak tracking, and adaptive motivation messages.</li>
+      <li>Starships are often unavailable or slow, especially compared to services like DoorDash.</li>
+      <li>The app lacks clarity around availability and delivery time estimates.</li>
+      <li>Many restaurants do not support Starship delivery despite being listed.</li>
+      <li>Limited routing intelligence—Starships frequently get stuck or take long detours.</li>
     </ul>
 
-    <p><strong>App Features:</strong></p>
+    <p><strong>Proposed Solutions:</strong></p>
     <ul>
-      <li>Daily challenge hub, community feed, transparent leaderboard with hearts instead of rankings.</li>
-      <li>Real-time authenticity tracking with alerts and explanations.</li>
-      <li>Flexible activity goals beyond steps, such as mindfulness or movement streaks.</li>
+      <li><strong>Tour Guide Starships:</strong> Starships that provide campus tours using projections, music on game days, and friendly interaction. Useful during BGR and for visitors. Includes robot lanes for smoother navigation.</li>
+      <li><strong>Guardian Starships:</strong> Security-enhanced Starships with facial recognition, AI detection for safety threats, emergency communication tools, and even a medkit or taser. These patrol the campus and offer nighttime escort features.</li>
+      <li><strong>Starship Drones:</strong> Aerial drone delivery to reduce navigation issues caused by construction or terrain. Allows for off-campus delivery with faster timing and fewer obstacles. Inspired by models like Zipline and Amazon Prime Air.</li>
     </ul>
 
     <p><strong>User Feedback:</strong></p>
     <ul>
-      <li>Praised the reduced pressure from rigid metrics.</li>
-      <li>Valued verified tracking and trust in the system.</li>
-      <li>Felt motivated by community features and real effort recognition.</li>
-      <li>Suggested improvements to personalize encouragement and clarify scoring logic.</li>
+      <li>Tour guide Starships were seen as gimmicky but possibly useful for overflow tours or showcasing Purdue's tech.</li>
+      <li>Guardian Starships were praised for increasing campus safety and reducing nighttime risk.</li>
+      <li>Drones were seen as the most impactful solution, especially for off-campus or terrain-limited deliveries.</li>
     </ul>
 
     <p><strong>My Contributions:</strong></p>
     <ul>
-      <li>Helped define project problem and scope using research insights.</li>
-      <li>Created user journey maps and conducted interviews.</li>
-      <li>Led Figma prototyping of core app features including the Integrity Score and Challenge Hub.</li>
-      <li>Contributed to writing and synthesis of user feedback into next-step priorities.</li>
+      <li>Created the solution sketches for all three concepts.</li>
+      <li>Researched drone use cases and integrated findings from Zipline, Amazon Prime Air, and Matternet.</li>
+      <li>Helped synthesize interview insights into practical user-facing design improvements.</li>
     </ul>
-  `;
-}
 
-  content.innerHTML = summary;
+    <img src="/mnt/data/Screenshot 2025-05-12 at 7.43.08 PM.png" alt="Tour Guide Starship Sketch">
+    <img src="/mnt/data/Screenshot 2025-05-12 at 7.43.16 PM.png" alt="Guardian Starship Sketch">
+    <img src="/mnt/data/Screenshot 2025-05-12 at 7.43.21 PM.png" alt="Drone Delivery Concept">
+  `;
   modal.style.display = 'block';
 }
 
