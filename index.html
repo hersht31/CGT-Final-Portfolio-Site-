@@ -157,8 +157,8 @@
 </section>
 
 <!-- Modal structure -->
-<div id="projectModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:2000;">
-  <div style="background:white; max-width:600px; margin:10% auto; padding:30px; border-radius:12px; position:relative;">
+<div id="projectModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:2000; overflow:auto;">
+  <div style="background:white; max-width:600px; margin:40px auto; padding:30px; border-radius:12px; position:relative; max-height:90vh; overflow-y:auto;">
     <span onclick="document.getElementById('projectModal').style.display='none'" style="position:absolute; top:10px; right:20px; font-size:20px; cursor:pointer;">&times;</span>
     <div id="modalContent">
       <h2>Project Title</h2>
